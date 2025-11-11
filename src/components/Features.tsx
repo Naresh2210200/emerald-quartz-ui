@@ -20,15 +20,20 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-16 bg-secondary/30">
+    <section className="py-16 bg-section-pink">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Our Learning Philosophy
-          </h2>
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <span className="text-6xl">🧪</span>
+            <h2 className="text-3xl md:text-5xl font-bold">
+              <span className="text-primary">STEM</span>{" "}
+              <span className="text-foreground">EDUCATION</span>
+            </h2>
+          </div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            We nurture curiosity and passion for discovery in children, preparing them 
-            to thrive in a technology-driven future.
+            Techyguide offers a creative platform where young minds can transform their ideas into 
+            real innovations using technology. It nurtures curiosity and a passion for discovery in children, 
+            preparing them to thrive in a technology-driven future.
           </p>
         </div>
 
@@ -36,15 +41,15 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-8 text-center hover:shadow-xl transition-all border border-border group hover:-translate-y-1"
+              className="text-center group"
             >
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+              <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg text-accent group-hover:scale-110 transition-transform border-4 border-accent/20">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-2xl font-bold text-accent mb-3">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground">{feature.description}</p>
+              <p className="text-foreground">{feature.description}</p>
             </div>
           ))}
         </div>

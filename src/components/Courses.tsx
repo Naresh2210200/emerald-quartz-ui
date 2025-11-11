@@ -56,44 +56,46 @@ const Courses = () => {
   ];
 
   return (
-    <section id="courses" className="py-16 bg-background">
+    <section id="courses" className="py-16 bg-section-yellow">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Explore Our Courses
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            The Best <span className="text-primary">STEM Platform</span> for Students & Educators
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Choose from our wide range of expertly designed courses to kickstart your learning journey
+            Choose from our wide range of expertly designed courses and DIY kits to kickstart your learning journey
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {courses.map((course, index) => (
-            <Card key={index} className="overflow-hidden hover:shadow-xl transition-all border-border group hover:-translate-y-1">
-              <CardHeader>
-                <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-6xl">{course.image}</span>
+            <Card key={index} className="overflow-hidden hover:shadow-xl transition-all group hover:-translate-y-2 bg-card border-2">
+              <CardHeader className="p-0">
+                <div className="relative w-full h-56 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center overflow-hidden">
+                  <span className="text-8xl">{course.image}</span>
+                  <Badge className="absolute top-4 left-4 bg-accent text-white border-none">
+                    {course.level}
+                  </Badge>
                 </div>
-                <div className="flex items-center justify-between mb-2">
-                  <Badge variant="secondary">{course.level}</Badge>
-                  <div className="flex items-center gap-1 text-sm">
-                    <Star className="w-4 h-4 fill-primary text-primary" />
-                    <span className="font-medium text-foreground">{course.rating}</span>
-                  </div>
+              </CardHeader>
+              <CardContent className="p-6">
+                <div className="flex items-center gap-1 mb-3">
+                  <Star className="w-4 h-4 fill-accent text-accent" />
+                  <span className="font-bold text-foreground">{course.rating}</span>
+                  <span className="text-muted-foreground text-sm">({course.students} students)</span>
                 </div>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                <CardTitle className="text-lg mb-3 group-hover:text-primary transition-colors">
                   {course.title}
                 </CardTitle>
-                <CardDescription>{course.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">
-                  {course.students} students enrolled
-                </p>
+                <CardDescription className="text-sm">{course.description}</CardDescription>
               </CardContent>
-              <CardFooter className="flex gap-2">
-                <Button className="flex-1">Enroll Now</Button>
-                <Button variant="outline">Learn More</Button>
+              <CardFooter className="p-6 pt-0 flex gap-2">
+                <Button className="flex-1 bg-accent hover:bg-accent/90 rounded-full">
+                  Enroll Now
+                </Button>
+                <Button variant="outline" className="rounded-full border-2">
+                  Know more
+                </Button>
               </CardFooter>
             </Card>
           ))}

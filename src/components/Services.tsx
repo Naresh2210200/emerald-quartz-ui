@@ -24,11 +24,11 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-16 bg-secondary/30">
+    <section id="services" className="py-16 bg-section-green">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Services for Educational Institutions
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            What do we do for <span className="text-primary">Educational Institutions</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Comprehensive solutions to enhance STEM education in schools and colleges
@@ -39,20 +39,18 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl overflow-hidden hover:shadow-xl transition-all border border-border group"
+              className="bg-card rounded-3xl overflow-hidden hover:shadow-2xl transition-all group hover:-translate-y-2"
             >
-              <div className="h-48 bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                <span className="text-7xl">{service.image}</span>
+              <div className="h-56 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center relative overflow-hidden">
+                <span className="text-8xl relative z-10">{service.image}</span>
+                <div className="absolute inset-0 bg-gradient-to-t from-white/50 to-transparent"></div>
               </div>
               <div className="p-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-2xl font-bold text-accent mb-3">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground mb-6">{service.description}</p>
-                <Button variant="outline" className="w-full">
+                <p className="text-foreground mb-6">{service.description}</p>
+                <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6">
                   Learn More
                 </Button>
               </div>

@@ -26,7 +26,7 @@ All colors MUST be HSL.
     --muted: 160 30% 95%;
     --muted-foreground: 210 15% 45%;
 
-    --accent: 160 70% 50%;
+    --accent: 25 95% 53%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -36,12 +36,18 @@ All colors MUST be HSL.
     --input: 160 20% 90%;
     --ring: 160 84% 39%;
 
-    --radius: 0.75rem;
+    --radius: 1.5rem;
+    
+    --section-yellow: 48 100% 95%;
+    --section-blue: 200 100% 95%;
+    --section-pink: 330 100% 95%;
+    --section-green: 160 60% 96%;
+    --section-orange: 25 100% 95%;
     
     --gradient-primary: linear-gradient(135deg, hsl(160 84% 39%), hsl(160 70% 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(160 84% 39% / 0.05), hsl(160 70% 50% / 0.05));
+    --gradient-orange: linear-gradient(135deg, hsl(25 95% 53%), hsl(35 95% 60%));
     --shadow-soft: 0 4px 20px -4px hsl(160 84% 39% / 0.15);
-    --shadow-medium: 0 10px 40px -10px hsl(160 84% 39% / 0.25);
+    --shadow-colored: 0 10px 40px -10px hsl(25 95% 53% / 0.2);
 
     --sidebar-background: 0 0% 98%;
 

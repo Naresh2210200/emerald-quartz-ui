@@ -3,85 +3,87 @@ import { ArrowRight, Play } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-secondary/30 to-background">
-      <div className="container mx-auto px-4">
+    <section id="home" className="pt-24 pb-8 md:pt-32 md:pb-12 bg-section-blue">
+      <div className="bg-accent text-white text-center py-3 -mt-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-3 text-sm font-medium">
+            <button className="px-4 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">All Products</button>
+            <button className="px-4 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">Combo</button>
+            <button className="px-4 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">Robotics</button>
+            <button className="px-4 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">IoT Products</button>
+            <button className="px-4 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">3D Printed</button>
+            <button className="px-4 py-1 bg-white/20 rounded-full hover:bg-white/30 transition-colors">Courses</button>
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 pt-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
-            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary font-medium text-sm">
-              🎓 #1 STEM Learning Platform
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border-2 border-accent rounded-full text-accent font-bold text-sm">
+              <span className="text-2xl">🚀</span>
+              #1 STEM Learning Platform for Kids
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Transform Your Future with{" "}
-              <span className="text-primary">Technology Education</span>
+              Get Your Kids{" "}
+              <span className="text-primary">Future Ready</span>{" "}
+              With A Certificate
             </h1>
             
             <p className="text-lg text-muted-foreground">
-              Master cutting-edge technologies through hands-on learning. Join 50,000+ students 
-              who are building their future with our expert-led courses in programming, AI, robotics, and more.
+              Enroll Today to Join 50,000+ Students Community. Master coding, robotics, AI, and more 
+              through engaging activities and hands-on projects.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="gap-2">
-                Book a Free Class
+              <Button size="lg" className="bg-primary hover:bg-primary/90 gap-2 text-lg px-8 py-6 rounded-full">
+                BOOK A FREE CLASS
                 <ArrowRight size={20} />
               </Button>
-              <Button size="lg" variant="outline" className="gap-2">
-                <Play size={20} />
-                Watch Demo
-              </Button>
+            </div>
+            
+            <div className="text-sm text-muted-foreground">
+              ⭐ Trusted by 50,000+ students worldwide
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
-              <div>
-                <div className="text-3xl font-bold text-primary">50K+</div>
-                <div className="text-sm text-muted-foreground">Students</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">100+</div>
-                <div className="text-sm text-muted-foreground">Courses</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">98%</div>
-                <div className="text-sm text-muted-foreground">Success Rate</div>
-              </div>
-            </div>
           </div>
 
-          {/* Right Content - Feature Icons */}
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-2xl">💻</span>
+          {/* Right Content - Feature Circles */}
+          <div className="relative">
+            <div className="grid grid-cols-2 gap-6">
+              <div className="relative">
+                <div className="w-40 h-40 bg-section-yellow rounded-full flex flex-col items-center justify-center border-4 border-white shadow-lg hover:scale-105 transition-transform">
+                  <span className="text-5xl mb-2">🖨️</span>
+                  <span className="text-sm font-semibold text-foreground">3D Printing</span>
+                </div>
               </div>
-              <h3 className="font-semibold text-foreground mb-2">Coding</h3>
-              <p className="text-sm text-muted-foreground">Master programming languages</p>
+              
+              <div className="relative mt-12">
+                <div className="w-40 h-40 bg-section-blue rounded-full flex flex-col items-center justify-center border-4 border-white shadow-lg hover:scale-105 transition-transform">
+                  <span className="text-5xl mb-2">💻</span>
+                  <span className="text-sm font-semibold text-foreground">Coding</span>
+                </div>
+              </div>
+              
+              <div className="relative -mt-6">
+                <div className="w-40 h-40 bg-section-pink rounded-full flex flex-col items-center justify-center border-4 border-white shadow-lg hover:scale-105 transition-transform">
+                  <span className="text-5xl mb-2">🤖</span>
+                  <span className="text-sm font-semibold text-foreground">Robotics</span>
+                </div>
+              </div>
+              
+              <div className="relative mt-6">
+                <div className="w-40 h-40 bg-section-orange rounded-full flex flex-col items-center justify-center border-4 border-white shadow-lg hover:scale-105 transition-transform">
+                  <span className="text-5xl mb-2">🔌</span>
+                  <span className="text-sm font-semibold text-foreground">IoT</span>
+                </div>
+              </div>
             </div>
             
-            <div className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-border mt-8">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-2xl">🤖</span>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">Robotics</h3>
-              <p className="text-sm text-muted-foreground">Build intelligent robots</p>
-            </div>
-            
-            <div className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-border">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-2xl">🧠</span>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">AI & ML</h3>
-              <p className="text-sm text-muted-foreground">Explore artificial intelligence</p>
-            </div>
-            
-            <div className="bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-border mt-8">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-2xl">🔧</span>
-              </div>
-              <h3 className="font-semibold text-foreground mb-2">IoT</h3>
-              <p className="text-sm text-muted-foreground">Connect the world</p>
+            {/* Decorative rocket */}
+            <div className="absolute -top-4 -right-4 text-6xl animate-bounce">
+              🚀
             </div>
           </div>
         </div>

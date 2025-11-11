@@ -6,12 +6,26 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background shadow-sm">
+      <div className="bg-section-yellow border-b border-border">
+        <div className="container mx-auto px-4 py-2 flex justify-between items-center text-sm">
+          <div className="flex items-center gap-4 text-muted-foreground">
+            <span>📞 +91 91140 36376</span>
+            <span>✉️ contact@edutech.in</span>
+          </div>
+          <Button variant="ghost" size="sm" className="text-primary hover:text-primary">
+            Login
+          </Button>
+        </div>
+      </div>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <span className="text-2xl font-bold text-primary">EduTech</span>
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-lg flex items-center justify-center text-white font-bold text-xl">
+              E
+            </div>
+            <span className="text-2xl font-bold text-foreground">EduTech</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -35,7 +49,7 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button>Get Started</Button>
+            <Button className="bg-accent hover:bg-accent/90">Shop</Button>
           </div>
 
           {/* Mobile Menu Button */}
